@@ -2,6 +2,8 @@ import Hapi from '@hapi/hapi'
 import api from './routes/api.js'
 
 const init = async () => {
+    console.log('NODE_ENV:', process.env.NODE_ENV)
+
     const server = Hapi.server({
         port: process.env.PORT || 8080,
         host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
