@@ -1,3 +1,3 @@
 import init from './src/server.js'
 
-init()
+init().then(r => {})
